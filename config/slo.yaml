@@ -7,7 +7,7 @@ primary_slo:
     total_event: 'event == "request_received"'
   target_percent: 99.5
   error_budget_percent: 0.5
-  note: Học viên phải giải thích hoặc điều chỉnh ngưỡng bằng baseline của mình.
+  note: Dựa trên baseline (P95 latency ~511ms, không lỗi), ngưỡng 3000ms cho phép hệ thống đáp ứng tốt người dùng trong điều kiện bình thường và phát hiện sớm hiện tượng nghẽn do RAG/LLM. Error budget 0.5% (tương đương 500 lỗi/chậm trên mỗi 100,000 requests trong cửa sổ 28 ngày).
 guardrails:
   error_rate_pct_max: 2
   daily_cost_usd_max: 2.5
